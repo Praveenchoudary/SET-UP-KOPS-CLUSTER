@@ -23,7 +23,8 @@ kubectl  Version
 ![image](https://github.com/user-attachments/assets/c7e1aae8-3b28-4d2b-b5e6-6b4d2a4299aa)
 
 KOPS  SETUP:
-curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
+
+curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl shttps://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
 chmod +x kops
 sudo mv kops /usr/local/bin/kops
 ![image](https://github.com/user-attachments/assets/bb1cd67a-0773-4163-b9b2-bae248805d7d)
