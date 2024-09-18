@@ -12,7 +12,7 @@ aws –version
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"              
 chmod +x kubectl
 mv kubectl /usr/local/bin/
-kubectl  Version
+kubectl  --version
 
 curl -Lo kops https://github.com/kubernetes/kops/releases/download/$(curl -s https://api.github.com/repos/kubernetes/kops/releases/latest | grep tag_name | cut -d '"' -f 4)/kops-linux-amd64
 chmod +x kops
@@ -22,4 +22,5 @@ export KOPS_STATE_STORE=s3://praveen.kopsbucket.k8s.local
 
 kops create cluster --name praveen.k8s.local --zones ap-south-1a --master-size t2.medium --node-size t2.micro --master-count 1 --node-count 2
 
-kops update cluster –name praveen.k8s.local –yes –admin 
+kops update cluster --name praveen1.k8s.local --yes --admin
+
