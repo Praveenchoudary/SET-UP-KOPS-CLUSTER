@@ -3,9 +3,9 @@ unzip awscliv2.zip
 sudo ./aws/install
 /usr/local/bin/aws --version
 vim .bashrc
-export PATH=$PATH:/usr/local/bi
+export PATH=$PATH:/usr/local/bin
 source .bash
-aws –version
+aws --version
 
 
 
